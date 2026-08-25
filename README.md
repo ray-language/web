@@ -1,3 +1,5 @@
+# `web` — el framework web de aplicación (M93)
+
 > **Espejo de solo lectura** — publicado desde
 > [`raylang/packages/web`](https://github.com/roberto-ayala/raylang/tree/main/packages/web);
 > el desarrollo y los PRs van al monorepo.
@@ -12,7 +14,6 @@
 > y `ray add web` — o la dependencia directa:
 > `web = "git+https://github.com/ray-language/web@v0.1.0"`.
 
-# `web` — el framework web de aplicación (M93)
 
 Framework estilo **Express** escrito en raylang puro sobre `net/webserver` (el servidor HTTP de
 producción, M56). Promovido desde `examples/web/framework.ray`; corre en la **VM y en el binario
@@ -53,7 +54,7 @@ fn main() -> int {
 
 ## Instalación
 
-Por ruta (monorepo / desarrollo):
+En tu `ray.toml` (por ruta en el monorepo; git desde el espejo publicado):
 
 ```toml
 [dependencies]
