@@ -1,3 +1,14 @@
+> **Espejo de solo lectura** — publicado desde
+> [\](https://github.com/roberto-ayala/raylang/tree/main/packages/web);
+> el desarrollo y los PRs van al monorepo.
+>
+> **Instalación** — en tu \:
+>
+> \\\
+>
+> y \ — o la dependencia directa:
+> \.
+
 # `web` — el framework web de aplicación (M93)
 
 Framework estilo **Express** escrito en raylang puro sobre `net/webserver` (el servidor HTTP de
@@ -5,7 +16,7 @@ producción, M56). Promovido desde `examples/web/framework.ray`; corre en la **V
 nativo** (el servidor cede fibras; el intérprete no las tiene). Guía completa:
 [`docs/web-framework.md`](../../docs/web-framework.md).
 
-```raylang
+```rust
 from web/framework import new_app, GET, listen, static_files, log_requests, text, Ctx, Res;
 
 fn main() -> int {
@@ -43,8 +54,8 @@ Por ruta (monorepo / desarrollo):
 
 ```toml
 [dependencies]
-web = "path:../raylang/packages/web"
-net = "path:../raylang/packages/net"   # web se apoya en net/webserver y net/log
+web = "git+https://github.com/ray-language/web@v0.1.0"
+net = "git+https://github.com/ray-language/net@v0.1.0"   # web se apoya en net/webserver y net/log
 ```
 
 Demo completo: [`examples/web/framework/`](../../examples/web/framework/).
