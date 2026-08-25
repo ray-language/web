@@ -1,13 +1,16 @@
 > **Espejo de solo lectura** — publicado desde
-> [\](https://github.com/roberto-ayala/raylang/tree/main/packages/web);
+> [`raylang/packages/web`](https://github.com/roberto-ayala/raylang/tree/main/packages/web);
 > el desarrollo y los PRs van al monorepo.
 >
-> **Instalación** — en tu \:
+> **Instalación** — en tu `ray.toml`:
 >
-> \\\
+> ```toml
+> [registry]
+> index = "git+https://github.com/ray-language/ray-index@main"
+> ```
 >
-> y \ — o la dependencia directa:
-> \.
+> y `ray add web` — o la dependencia directa:
+> `web = "git+https://github.com/ray-language/web@v0.1.0"`.
 
 # `web` — el framework web de aplicación (M93)
 
