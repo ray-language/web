@@ -1,7 +1,7 @@
 # `web` — el framework web de aplicación (M93)
 
 > **Espejo de solo lectura** — publicado desde
-> [`raylang/packages/web`](https://github.com/roberto-ayala/raylang/tree/main/packages/web);
+> [`raylang/packages/web`](https://github.com/ray-language/raylang/tree/main/packages/web);
 > el desarrollo y los PRs van al monorepo.
 >
 > **Instalación** — en tu `ray.toml`:
