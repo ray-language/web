@@ -12,7 +12,7 @@
 > ```
 >
 > y `ray add web` — o la dependencia directa:
-> `web = "git+https://github.com/ray-language/web@v0.4.3"`.
+> `web = "git+https://github.com/ray-language/web@v0.4.4"`.
 
 
 Framework estilo **Express** escrito en raylang puro sobre `net/webserver` (el servidor HTTP de
@@ -58,8 +58,8 @@ En tu `ray.toml` (por ruta en el monorepo; git desde el espejo publicado):
 
 ```toml
 [dependencies]
-web = "git+https://github.com/ray-language/web@v0.4.3"
-net = "git+https://github.com/ray-language/net@v0.3.3"   # web se apoya en net/webserver y net/log
+web = "git+https://github.com/ray-language/web@v0.4.4"
+net = "git+https://github.com/ray-language/net@v0.3.5"   # web se apoya en net/webserver y net/log
 ```
 
 Demo completo: [`examples/web/framework/`](../../examples/web/framework/).
