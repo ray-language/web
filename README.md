@@ -9,11 +9,11 @@
 >
 > ```toml
 > [dependencies]
-> web = "^0.4.6"
+> web = "^0.5.0"
 > ```
 >
 > Sin índice, la dependencia git directa:
-> `web = "git+https://github.com/ray-language/web@v0.4.6"`.
+> `web = "git+https://github.com/ray-language/web@v0.5.0"`.
 
 
 Framework estilo **Express** escrito en raylang puro sobre `net/webserver` (el servidor HTTP de
@@ -55,7 +55,9 @@ fn main() -> int {
   raylang puro: barato en nativo, medible en la VM).
 - **Despliegue**: `listen` (keep-alive + límites por defecto + panic-del-handler→500, herencia de
   `webserver.serve`), `listen_tls(cert, key)` (HTTPS, M56.3), `listen_graceful(drain_ms)` (apagado
-  ordenado con SIGTERM/SIGINT, M88.1b) y `listen_limits(webserver.Limits)`.
+  ordenado con SIGTERM/SIGINT, M88.1b), `listen_limits(webserver.Limits)` y, para combinarlas,
+  `listen_with(build, host, port, options().with_limits(l).with_drain(ms).with_tls(cert, key))`
+  (M347).
   ⚠️ El **builder corre por PETICIÓN**: `listen(build_app, …)` llama a `build_app()` en la tarea de
   cada petición (también las keep-alive de una misma conexión: el aislamiento panic→500 corre cada
   una en una tarea nueva). No abras recursos dentro del builder —una conexión SQLite, un archivo,
